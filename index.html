@@ -3,19 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal Informasi Pengguna Adakami</title>
-  <meta property="og:image" content="https://pusat-info-adakami.online/adakamiR.png">
+  <title>Portal Informasi Pengguna</title>
+  <meta property="og:image" content="https://www.pusat-info-adakami.online/adakamiR.png">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="adakamiR.png">
   <script src="https://cdn.tailwindcss.com"></script>
   
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');  
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #022c22, #020617);
+      /* Perbaikan: Memastikan gradient warna background terbaca */
+      background: #020617; 
+      background: linear-gradient(180deg, #022c22 0%, #020617 100%);
       color: #f1f5f9;
+      min-height: 100vh;
+      margin: 0;
     }
 
     .soft-card {
@@ -64,6 +68,11 @@
       justify-content: center;
       box-shadow: 0 10px 25px rgba(0,0,0,0.5);
       z-index: 999;
+      transition: transform 0.3s;
+    }
+
+    .wa-float:hover {
+      transform: scale(1.1);
     }
     
     .banner-img {
@@ -119,7 +128,6 @@
       </div>
 
       <div class="space-y-3">
-
         <a href="https://wa.me/message/T6OQVASQ2ZOND1" class="item">
           <div class="icon">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
@@ -132,9 +140,7 @@
         <a href="https://wa.me/message/T6OQVASQ2ZOND1" class="item">
           <div class="icon">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <path d="M12 20V10"/>
-              <path d="M18 20V4"/>
-              <path d="M6 20v-6"/>
+              <path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-6"/>
             </svg>
           </div>
           <span class="text-sm font-medium">Panduan & Alur</span>
@@ -157,14 +163,9 @@
           </div>
           <span class="text-sm font-medium">Diskusi & Klarifikasi</span>
         </a>
-
       </div>
 
     </main>
-
-    <div class="text-center opacity-40 mb-8">
-        <p class="text-[9px] uppercase tracking-[0.2em] font-bold">Informasi Layanan Terverifikasi</p>
-    </div>
 
     <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/10 pb-8">
         <div>
@@ -184,8 +185,10 @@
   
   </div>
 
-  <a href="https://wa.me/62822111378?text=Hallo%20Admin%20Pusat" class="wa-float">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" width="40">
+  <a href="https://wa.me/message/T6OQVASQ2ZOND1" class="wa-float">
+    <svg width="35" height="35" viewBox="0 0 24 24" fill="white">
+      <path d="M12.031 6.172c-2.32 0-4.591 1.242-4.591 3.856 0 1.562.894 2.453 1.107 2.692-.121.307-.214.546-.593 1.752-.057.185-.1.309-.122.408a.24.24 0 0 0 .043.232.24.24 0 0 0 .213.107c.303 0 .614-.05.958-.15.827-.241 1.433-.421 1.433-.421.144.116.321.233.53.342.634.332 1.433.483 2.188.483 2.132 0 4.137-1.127 4.137-3.834 0-2.583-2.316-3.868-5.302-3.868zM12 2a10 10 0 1 1-10 10A10.011 10.011 0 0 1 12 2zm0 18a8 8 0 1 0-8-8 8.01 8.01 0 0 0 8 8z"/>
+    </svg>
   </a>
 
 </body>
