@@ -12,13 +12,15 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #0f172a, #020617);
+      background: linear-gradient(180deg, #022c22, #020617);
+      color: #f1f5f9;
     }
 
     .soft-card {
-      background: #020617;
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(2, 6, 23, 0.6);
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 18px;
+      backdrop-filter: blur(10px);
     }
 
     .item {
@@ -29,16 +31,17 @@
       align-items: center;
       gap: 0.8rem;
       transition: all .25s ease;
-      background: rgba(255,255,255,0.02);
+      background: rgba(255,255,255,0.03);
     }
 
     .item:hover {
-      background: rgba(255,255,255,0.06);
+      background: rgba(74, 222, 128, 0.1);
+      border-color: rgba(74, 222, 128, 0.3);
       transform: translateY(-1px);
     }
 
     .icon {
-      background: linear-gradient(135deg, #38bdf8, #2563eb);
+      background: linear-gradient(135deg, #34d399, #059669);
       padding: 8px;
       border-radius: 10px;
       display: flex;
@@ -60,19 +63,32 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.5);
       z-index: 999;
     }
+    
+    .banner-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+    }
   </style>
 </head>
 
 <body class="text-slate-100">
 
-  <div class="max-w-md mx-auto min-h-screen flex flex-col px-5">
+  <div class="max-w-md mx-auto min-h-screen flex flex-col px-5 py-6">
 
-    <!-- HEADER -->
-    <header class="pt-10 pb-6">
-      <span class="text-xs tracking-widest uppercase text-slate-400">
+    <div class="mb-6">
+      <img src="upscalemedia-transformed(1).jpeg" alt="Layanan Pelanggan" class="banner-img">
+    </div>
+
+    <header class="pb-6">
+      <span class="text-xs tracking-widest uppercase text-emerald-400 font-semibold">
         Information Hub
       </span>
-      <h1 class="text-2xl font-bold mt-2">
+      <h1 class="text-2xl font-bold mt-2 text-white">
         Portal Informasi Pengguna
       </h1>
       <p class="text-sm text-slate-400 mt-2 leading-relaxed">
@@ -81,31 +97,28 @@
       </p>
     </header>
 
-    <!-- CONTENT -->
     <main class="flex-1">
 
-      <!-- INTRO CARD -->
       <div class="soft-card p-5 mb-6">
-        <h2 class="text-sm font-semibold mb-2 text-slate-200">
+        <h2 class="text-sm font-semibold mb-2 text-emerald-100">
           Mulai dari sini
         </h2>
-        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+        <p class="text-xs text-slate-300 leading-relaxed mb-4">
           Pilih kategori di bawah sesuai kebutuhan Anda.
           Setiap menu akan mengarahkan ke penjelasan lebih lanjut.
         </p>
 
         <a
-          href="https://wa.me/6281264464417?text=Halo%20saya%20ingin%20bertanya"
-          class="block text-center bg-blue-600 hover:bg-blue-700 transition text-sm font-semibold py-3 rounded-xl"
+          href="https://wa.me/message/T6OQVASQ2ZOND1"
+          class="block text-center bg-emerald-600 hover:bg-emerald-500 transition text-white text-sm font-semibold py-3 rounded-xl shadow-lg shadow-emerald-900/50"
         >
           Ajukan Pertanyaan
         </a>
       </div>
 
-      <!-- MENU LIST -->
       <div class="space-y-3">
 
-        <a href="https://wa.me/6281264464417" class="item">
+        <a href="https://wa.me/message/T6OQVASQ2ZOND1" class="item">
           <div class="icon">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
               <rect x="3" y="4" width="18" height="14" rx="2"/>
@@ -114,7 +127,7 @@
           <span class="text-sm font-medium">Informasi Dasar</span>
         </a>
 
-        <a href="https://wa.me/6281264464417" class="item">
+        <a href="https://wa.me/message/T6OQVASQ2ZOND1" class="item">
           <div class="icon">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
               <path d="M12 20V10"/>
@@ -125,7 +138,7 @@
           <span class="text-sm font-medium">Panduan & Alur</span>
         </a>
 
-        <a href="https://wa.me/6281264464417" class="item">
+        <a href="https://wa.me/message/T6OQVASQ2ZOND1" class="item">
           <div class="icon">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
               <circle cx="12" cy="12" r="9"/>
@@ -134,7 +147,7 @@
           <span class="text-sm font-medium">Penyesuaian Preferensi</span>
         </a>
 
-        <a href="https://wa.me/6281264464417" class="item">
+        <a href="https://wa.me/message/T6OQVASQ2ZOND1" class="item">
           <div class="icon">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14"/>
@@ -147,7 +160,6 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="mt-10 pb-8 text-center text-xs text-slate-500">
       Halaman ini bersifat informatif dan tidak mewakili pihak,
       institusi, atau layanan resmi tertentu.
@@ -155,8 +167,7 @@
 
   </div>
 
-  <!-- FLOATING WHATSAPP -->
-  <a href="https://wa.me/6281264464417" class="wa-float">
+  <a href="https://wa.me/message/T6OQVASQ2ZOND1" class="wa-float">
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
       alt="WhatsApp"
