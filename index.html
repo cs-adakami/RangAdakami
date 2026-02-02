@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Informasi Pengguna</title>
 
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #0f172a, #020617);
+    }
+
+    .soft-card {
+      background: #020617;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+    }
+
+    .item {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 0.9rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      transition: all .25s ease;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .item:hover {
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-1px);
+    }
+
+    .icon {
+      background: linear-gradient(135deg, #38bdf8, #2563eb);
+      padding: 8px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wa-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+  </style>
+</head>
+
+<body class="text-slate-100">
+
+  <div class="max-w-md mx-auto min-h-screen flex flex-col px-5">
+
+    <!-- HEADER -->
+    <header class="pt-10 pb-6">
+      <span class="text-xs tracking-widest uppercase text-slate-400">
+        Information Hub
+      </span>
+      <h1 class="text-2xl font-bold mt-2">
+        Portal Informasi Pengguna
+      </h1>
+      <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+        Halaman ini menyediakan panduan umum dan jalur komunikasi
+        untuk membantu memahami layanan secara lebih jelas.
+      </p>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="flex-1">
+
+      <!-- INTRO CARD -->
+      <div class="soft-card p-5 mb-6">
+        <h2 class="text-sm font-semibold mb-2 text-slate-200">
+          Mulai dari sini
+        </h2>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          Pilih kategori di bawah sesuai kebutuhan Anda.
+          Setiap menu akan mengarahkan ke penjelasan lebih lanjut.
+        </p>
+
+        <a
+          href="https://wa.me/6281264464417?text=Halo%20saya%20ingin%20bertanya"
+          class="block text-center bg-blue-600 hover:bg-blue-700 transition text-sm font-semibold py-3 rounded-xl"
+        >
+          Ajukan Pertanyaan
+        </a>
+      </div>
+
+      <!-- MENU LIST -->
+      <div class="space-y-3">
+
+        <a href="https://wa.me/6281264464417" class="item">
+          <div class="icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <rect x="3" y="4" width="18" height="14" rx="2"/>
+            </svg>
+          </div>
+          <span class="text-sm font-medium">Informasi Dasar</span>
+        </a>
+
+        <a href="https://wa.me/6281264464417" class="item">
+          <div class="icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M12 20V10"/>
+              <path d="M18 20V4"/>
+              <path d="M6 20v-6"/>
+            </svg>
+          </div>
+          <span class="text-sm font-medium">Panduan & Alur</span>
+        </a>
+
+        <a href="https://wa.me/6281264464417" class="item">
+          <div class="icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+            </svg>
+          </div>
+          <span class="text-sm font-medium">Penyesuaian Preferensi</span>
+        </a>
+
+        <a href="https://wa.me/6281264464417" class="item">
+          <div class="icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14"/>
+            </svg>
+          </div>
+          <span class="text-sm font-medium">Diskusi & Klarifikasi</span>
+        </a>
+
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-10 pb-8 text-center text-xs text-slate-500">
+      Halaman ini bersifat informatif dan tidak mewakili pihak,
+      institusi, atau layanan resmi tertentu.
+    </footer>
+
+  </div>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/6281264464417" class="wa-float">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp"
+      width="32"
+    />
+  </a>
+
+</body>
+</html>
